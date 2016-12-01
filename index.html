@@ -5,6 +5,19 @@
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
     <link rel="stylesheet" href="index2.html" media="screen" title="no title">
     <title>Local storage JS</title>
+  </head>
+  <body>
+<form class="redirection" action="index2.html">
+    <input type="submit" name="name" value="ici">
+</form>
+
+<form class="parla" action="index3.html">
+    <input type="submit" name="name" value="interface">
+</form>
+
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+
 <script type="text/javascript">
 localStorage.setItem("couleur","vert");
 localStorage.setItem("vert","#98BE65")
@@ -22,21 +35,6 @@ function clickCounter() {
         document.getElementById("result").innerHTML = "Error.";
     }
 }
-</script>
-  </head>
-  <body>
-<form class="redirection" action="index2.html">
-    <input type="submit" name="name" value="ici">
-</form>
-
-<p><button onclick="clickCounter()" type="button">Click me!</button></p>
-<div id="result"></div>
-
-
-
-
-
-
 </script>
   </body>
 </html>

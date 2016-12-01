@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Local Storage JS</title>
+  </head>
+  <body>
+    <h1>Formulaire Local Storage JS</h1>
+
+<div id="wrap">
+
+
+
+	<form>
+		<p><label>Nom</label></p>
+		<p><input id="nom" name="nom" type="text"></p>
+		<p><label>Valeur</label></p>
+		<p><input id="valeur" name="valeur" type="text"></p>
+
+			<input type="button" value="Ecrire" id="stockage">
+			<input type="reset" value="Effacer tout">
+			<input type="button" value="Récupérer" id="lecture">
+      <button onclick="window.localStorage.clear();">Reinitialiser</button>
+		</p>
+	</form>
+
+
+
+<script>
+
+document.getElementById('stockage').onclick = function() {
+	if(typeof localStorage!='undefined' && JSON) {
+		var coordonnees = {
+			nom:document.getElementById('nom').value,
+			valeur:document.getElementById('valeur').value,
+
+		};
+		localStorage.setItem('coord',JSON.stringify(coordonnees));
+		alert("Mémorisation effectuée");
+	} else alert("localStorage n'est pas supporté");
+};
+
+document.getElementById('lecture').onclick = function() {
+	if(typeof localStorage!='undefined' && JSON) {
+		var coordonnees = JSON.parse(localStorage.getItem('coord'));
+		document.getElementById('nom').value = coordonnees.nom;
+		document.getElementById('valeur').value = coordonnees.valeur;
+		alert("Recupération des données.");
+	} else alert("localStorage n'est pas supporté");
+};
+
+document.getElementById('supression').onclick = function(){
+  document.getElementById('nom').value = coordonnees.nom;
+  document.getElementById('valeur').value = coordonnees.valeur;
+  localStorage.clear();
+}
+
+</script>
+
+
+  </body>
+</html>
