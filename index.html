@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" media="screen" title="no title">
+    <link rel="stylesheet" href="index2.html" media="screen" title="no title">
+    <title>Local storage JS</title>
+<script type="text/javascript">
+localStorage.setItem("couleur","vert");
+localStorage.setItem("vert","#98BE65")
+</script>
+<script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        } else {
+            sessionStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "Vous avez cliqué " + sessionStorage.clickcount + " fois dans cette session.";
+    } else {
+        document.getElementById("result").innerHTML = "Error.";
+    }
+}
+</script>
+  </head>
+  <body>
+<form class="redirection" action="index2.html">
+    <input type="submit" name="name" value="ici">
+</form>
+
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+
+
+
+
+
+
+</script>
+  </body>
+</html>
