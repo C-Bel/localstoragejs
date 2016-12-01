@@ -1,0 +1,27 @@
+body{
+  background-image:url(ecran3.jpg);
+  background-repeat: no-repeat;
+}
+
+input{
+  background-color: blue;
+  color: white;
+  height: 50px;
+  width: 100px;
+}
+
+button{
+  background-color: blue;
+  color: white;
+  height: 50px;
+  width: 100px;
+}
+
+.containeur{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 250px;
+  margin-top: 400px;
+}
