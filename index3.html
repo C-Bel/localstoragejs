@@ -10,23 +10,28 @@
 
 <div id="wrap">
 
-
-
 	<form>
-		<p><label>Nom</label></p>
+    <div class="form">
+
+		<p><label>NOM</label></p>
 		<p><input id="nom" name="nom" type="text"></p>
-		<p><label>Valeur</label></p>
+		<p><label>VALEUR</label></p>
 		<p><input id="valeur" name="valeur" type="text"></p>
 
 			<input type="button" value="Ecrire" id="stockage">
-			<input type="reset" value="Effacer tout">
+			<input type="reset" value="Effacer tout" id="effacer">
 			<input type="button" value="Récupérer" id="lecture">
-      <button onclick="window.localStorage.clear();">Reinitialiser</button>
+      <button id ="clear" onclick="window.localStorage.clear();">Reinitialiser</button>
 		</p>
+  </div>
 	</form>
 
+  <img src="fleche.png" alt="" />
 
-
+  <div class="containeur1">
+    <p id="yo"></p>
+  </div>
+</div>
 <script>
 
 document.getElementById('stockage').onclick = function() {
@@ -46,6 +51,8 @@ document.getElementById('lecture').onclick = function() {
 		var coordonnees = JSON.parse(localStorage.getItem('coord'));
 		document.getElementById('nom').value = coordonnees.nom;
 		document.getElementById('valeur').value = coordonnees.valeur;
+
+    document.getElementById('yo').innerHTML = coordonnees.nom + " " + coordonnees.valeur;
 		alert("Recupération des données.");
 	} else alert("localStorage n'est pas supporté");
 };

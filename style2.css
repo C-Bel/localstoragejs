@@ -1,0 +1,18 @@
+body{
+  background-image:url(rih.jpeg);
+  background-repeat: no-repeat;
+}
+
+p{
+    display: flex;
+    align-items: center;
+    margin-left: 700px;
+    margin-top: 300px;
+    border: 3px solid #75A6B7;
+    border-radius: 10px;
+    height: 200px;
+    width: 300px;
+    box-shadow: 10px 10px 5px #888888;
+    padding-left: 200px;
+    background-color: white;
+}
